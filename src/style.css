@@ -1,0 +1,40 @@
+.circle{
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color:#e3e3e3;
+  }
+  .left-wrap{
+    overflow: hidden;
+    position: absolute;
+    top:0;
+  }
+  .right-wrap {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+  }
+
+  .loader{
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:1000;
+  }
+  .loader2{
+    position:absolute;
+    left:0;
+    top:0;
+    border-radius:1000;
+  }
+
+  .inner-circle {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  .text {
+    font-size: 11;
+    color: #888;
+  }
