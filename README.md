@@ -1,20 +1,21 @@
 # Reactjs-percentage-circle
 
-[![npm](https://img.shields.io/npm/v/react-core-loading-spinner.svg?maxAge=2592000)]()
-![Node Version](https://img.shields.io/node/v/react-core-loading-spinner.svg "Node Version")
-[![Build Status](https://travis-ci.org/JackPu/react-core-loading-spinner.svg?branch=master)](https://travis-ci.org/JackPu/react-core-loading-spinner)
+[![npm](https://img.shields.io/npm/v/reactjs-percentage-circle.svg?maxAge=2592000)]()
+![Node Version](https://img.shields.io/node/v/reactjs-percentage-circle.svg "Node Version")
+[![Build Status](https://travis-ci.org/JackPu/reactjs-percentage-circle.svg?branch=master)](https://travis-ci.org/JackPu/reactjs-percentage-circle)
 
-
-<img src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
+<img width="360" src="http://img1.vued.vanthink.cn/vued51984c8d081502c58a7ef5c9bdda81e1.png"/>
 
 Reactjs-percentage-circle is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.And you can show some data in a circle you want.
 
 [React Native Version](https://github.com/JackPu/react-native-percentage-circle)
 
 
-<img width="480" src="http://img1.vued.vanthink.cn/vued9c00a0a75734849d01def751ca10f248.png"/>
+<img width="480" src="http://img1.vued.vanthink.cn/vuedc58a98ffa5a82311e9bb654c726e97e8.png"/>
 
 *This is a screenshot of the Demo*
+
+[Demos](http://events.jackpu.com/reactjs-percentage-circle/index.html)
 
 ### Start 
 
@@ -30,14 +31,12 @@ import PercentageCircle from 'reactjs-percentage-circle';
 //...
 
 render() {
-  <View>
-    <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
-  </View>
-   <View>
-    <PercentageCircle radius={35} percent={50} color={"#3498db"}>
-      <Image style={{width:20,height:20}} source={{require('your image')}} />
-    </PercentageCircle>  
-  </View>
+  <div>
+    <PercentageCircle percent={80}></PercentageCircle>
+    <PercentageCircle percent={80}>
+      <p>Children</p>
+    </PercentageCircle>
+  </div>
 }
 
 ```

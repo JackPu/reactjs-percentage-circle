@@ -4,5 +4,10 @@
         "react",
         "jsx-a11y",
         "import"
-    ]
+    ],
+    "rules": {
+      "prefer-template": 0,
+      "no-mixed-operators": 0,
+      "object-shorthand": 0
+    }
 }

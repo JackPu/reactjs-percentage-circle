@@ -8,6 +8,22 @@ const styles = require('style-loader!css-loader!./style.css');
 class ReactjsPercentageCircle extends Component {
   constructor(props) {
     super(props);
+    const percent = props.percent;
+    let leftTransformerDegree = '0deg';
+    let rightTransformerDegree = '0deg';
+    if (percent >= 50) {
+      rightTransformerDegree = '180deg';
+      leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
+    } else {
+      rightTransformerDegree = percent * 3.6 + 'deg';
+      leftTransformerDegree = '0deg';
+    }
+    this.state = {
+      percent: this.props.percent,
+      borderWidth: this.props.borderWidth < 2 || !this.props.borderWidth ? 2 : this.props.borderWidth,
+      leftTransformerDegree: leftTransformerDegree,
+      rightTransformerDegree: rightTransformerDegree,
+    };
   }
   render() {
     return (
@@ -38,9 +54,9 @@ class ReactjsPercentageCircle extends Component {
               borderTopLeftRadius: 0,
               borderBottomLeftRadius: 0,
               backgroundColor: this.props.color,
+              transform: 'rotate(' + this.state.leftTransformerDegree + ')',
             }}
-          >
-          </div>
+          />
         </div>
         <div
           className="right-wrap"
@@ -51,7 +67,7 @@ class ReactjsPercentageCircle extends Component {
           }}
         >
           <div
-            className="loader"
+            className="loader2"
             id="id2"
             style={{
               left: -this.props.radius,
@@ -60,23 +76,25 @@ class ReactjsPercentageCircle extends Component {
               borderTopRightRadius: 0,
               borderBottomRightRadius: 0,
               backgroundColor: this.props.color,
+              transform: 'rotate(' + this.state.rightTransformerDegree + ')',
             }}
-          >
-          </div>
+          />
         </div>
         <div
           className="inner-circle"
           style={{
+            left: this.props.borderWidth,
+            top: this.props.borderWidth,
             width: (this.props.radius - this.props.borderWidth) * 2,
             height: (this.props.radius - this.props.borderWidth) * 2,
             borderRadius: this.props.radius - this.props.borderWidth,
             backgroundColor: this.props.innerColor,
           }}
         >
-          {this.props.children ? this.props.children : <span class="text" style={this.state.textStyle}>{this.props.percent}%</span>}
+          {this.props.children ? this.props.children : <span className={'text ' + this.props.textStyle}>{this.props.percent}%</span>}
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -86,8 +104,8 @@ ReactjsPercentageCircle.propTypes = {
   innerColor: React.PropTypes.string,
   radius: React.PropTypes.number,
   percent: React.PropTypes.number,
-  borderWidth: React.Proptypes.number,
-  disabled: React.PropTypes.bool,
+  borderWidth: React.PropTypes.number,
+  textStyle: React.PropTypes.string,
 };
 
 ReactjsPercentageCircle.defaultProps = {
@@ -98,6 +116,7 @@ ReactjsPercentageCircle.defaultProps = {
   bgcolor: '#e3e3e3',
   innerColor: '#fff',
   disabled: false,
+  textStyle: '',
 };
 
 export default ReactjsPercentageCircle;

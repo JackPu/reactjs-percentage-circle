@@ -73,7 +73,7 @@ h4{
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background-color: #9b59b6;
+    background-color: #3765af;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -204,7 +204,7 @@ a.pure-button-primary {
     z-index: 2;
     background: white;
     
-    background-color: #9b59b6;
+    background-color: #3765af;
 
 }
 .content-wrapper .content{
@@ -232,7 +232,13 @@ a.pure-button-primary {
     margin: 2em 0 1em;
     font-size: 33px;
 }
-
+.circle-item{
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 /* This is a modifier className used when the content-head is inside a ribbon */
 .content-head-ribbon {
     color: white;
