@@ -1,20 +1,20 @@
 import React from 'react';
 import {Spinner}  from '../index';
-let Contents = React.createClass({ 
+let Contents = React.createClass({
   getInitialState () {
     return {
       show: false,
       btnState: false,
     };
   },
-  
+
   handleClick() {
     this.setState({
       show:!this.state.show,
-     
+
     })
   },
-  
+
   handleTimeout() {
     var self = this;
     this.setState({
@@ -26,7 +26,7 @@ let Contents = React.createClass({
       });
     },5000)
   },
-  
+
   render() {
     return(
       <div className="contents">
@@ -36,7 +36,7 @@ let Contents = React.createClass({
             <div className="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
               <h4>默认加载效果</h4>
               <div className="loading-demo">
-                <Spinner show={true}></Spinner>  
+                <Spinner show={true}></Spinner>
               </div>
               <pre className="highlight javascript"><code>
               {'<Spinner show={true}></Spinner>'}
@@ -66,7 +66,7 @@ let Contents = React.createClass({
               </code></pre>
               <h4>使用事件控制加载隐藏 <code>show</code> 属性</h4>
               <button className="pure-button pure-button-primary" onClick={() => {this.handleClick()}}>显示</button>
-              
+
               <button style={{marginLeft:20}} className="pure-button pure-button-primary" onClick={() => {this.handleClick()}}>隐藏</button>
               <div className="loading-box">
                 <Spinner type="gif" text={this.state.show?'显示...':'隐藏...'} show={this.state.show} color="#3498db"></Spinner>
@@ -75,7 +75,7 @@ let Contents = React.createClass({
               {'<Spinner show={this.state.show} type="gif" color="#3498db"></Spinner>'}
               </code></pre>
               <h4>行内加载 <code>display</code> 属性</h4>
-             
+
               <button style={{marginLeft:20}} disabled={this.state.btnState} className="pure-button pure-button-primary" onClick={() => {this.handleTimeout()}}>显示
                  <Spinner size="24" display="inline"  show={this.state.btnState} color="#fff"></Spinner>
               </button>
@@ -89,11 +89,11 @@ let Contents = React.createClass({
           </div>
 
         </div>
-       
+
       </div>
     );
   },
-  
+
 });
 
-export default Contents;  
+export default Contents;

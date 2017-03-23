@@ -4,63 +4,62 @@
 ![Node Version](https://img.shields.io/node/v/react-core-loading-spinner.svg "Node Version")
 [![Build Status](https://travis-ci.org/JackPu/react-core-loading-spinner.svg?branch=master)](https://travis-ci.org/JackPu/react-core-loading-spinner)
 
-<img src="./shots/react-loading-spinner.png" height="180"/>
 
-A component for loading spinner
+<img src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
 
+React Native Version >= 0.25
 
-### Install
-Use Npm
-```bash
-npm install react-core-loading-spinner --save-dev
-```
+React-Native-Percentage-Cirlce is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.And you can show some data in a circle you want.
 
-Use yarn
+<img width="480" src="http://img1.vued.vanthink.cn/vued9c00a0a75734849d01def751ca10f248.png"/>
+
+*This is a screenshot of the Demo*
+
+### Start 
+
 ``` bash
-yarn add react-core-loading-spinner
+npm i react-native-percentage-circle --save
+
 ```
 
-Code Example
 ``` js
-import React from 'react';
-import {Spinner}  from '../react-core-image-upload';
-let App = React.createClass({ 
+
+import PercentageCircle from 'react-native-percentage-circle';
+
 //...
 
-  render() {
-    return(
-      <div>
-        <Spinner show={true} text="Requesting..."></Spinner>
-      </div>
-    );
-  },
-  
-})
+render() {
+  <View>
+    <PercentageCircle radius={35} percent={50} color={"#3498db"}></PercentageCircle>  
+  </View>
+   <View>
+    <PercentageCircle radius={35} percent={50} color={"#3498db"}>
+      <Image style={{width:20,height:20}} source={{require('your image')}} />
+    </PercentageCircle>  
+  </View>
+}
 
 ```
 
-
-
-### Run demo
-``` bash
-npm run start
-```
-[http://localhost:9000/webpack-dev-server/demo/index.html](http://localhost:9000/webpack-dev-server/demo/index.html)
-
-[Demo](http://vanthink-ued.github.io/react-core-loading-spinner/)
 ### Options
 
 | Props        | Type         | Example  | Description  |
-| ------------- |:----------| ---------|--------------|
-| show     | Boolean | true | show or hide  |
-| text      | String      |  'Loading...' | the text you want to show |
-| size | Number     |   28 | the size of the loading spinner |
-| children | Element   |    ... | change the loading element |
-| type | String   |   gif | loading gif |
-| style | Object   |   '1:1' | change loading wrap style|
+| ------------- |:-------------:| -----:|----------:|
+| color     | string | '#000' | the color of border |
+| bgcolor     | string | '#e3e3e3' | the background color of the circle  |
+| innerColor     | string | '#fff' | the color of the inside of the circle  |
+| percent      | Number      |  30 | the percent you need |
+| radius | Number     |    20 | how large the circle is |
+| borderWidth | Number(default 2)     |    5 | the width of  percentage progress bar |
+| textStyle | Array   | {fontSize: 24, color: 'red'} | define the style of the text which in the circle |
+| children | jsx   | `<Text>123</Text>` | define the children component in the circle |
 
 ### Contributions
 
 Your contributions and suggestions are welcome 😄😄😄
 
-### MIT Liscense 
+### MIT License
+
+
+
+

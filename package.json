@@ -1,17 +1,16 @@
 {
-  "name": "react-core-loading-spinner",
-  "version": "1.0.2",
+  "name": "reactjs-percentage-circle",
+  "version": "0.0.1",
   "description": "a component for loading spinner",
   "keywords": [
     "react",
-    "loading",
+    "percentage",
     "spinner",
-    "component",
-    "core"
+    "circle"
   ],
   "main": "src/index.js",
   "repository": {
-    "url": "https://github.com/JackPu/react-core-loading-spinner.git",
+    "url": "https://github.com/JackPu/react-percentage-circle.git",
     "type": "git"
   },
   "scripts": {
@@ -62,7 +61,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "engines": {
-    "node": ">=4.0.0",
+    "node": ">=6.0.0",
     "npm": "~3.3.6"
   }
 }

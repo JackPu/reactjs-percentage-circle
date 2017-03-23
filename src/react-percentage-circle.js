@@ -17,14 +17,14 @@ class Spinner  extends Component {
   render() {
 
     return (
-      <div class="circle" style="width:{{radius*2}};height:{{radius*2}};border-radius:{{radius}}">
-        <div class="left-wrap" style="width:{{radius}};height:{{radius*2}};left:0;">
-          <div class="loader" id="id1" style="left:{{radius}};width:{{radius}};height:{{radius*2}};border-top-left-radius:0;border-bottom-left-radius:0;background-color:{{color}};"></div>
+      <div class="circle" style="{{width:this.props.radius*2;height:this.props.radius*2;border-radius:this.props.radius;}}">
+        <div class="left-wrap" style={{width:this.props.radius;height:this.props.radius*2;left:0;}}>
+          <div class="loader" id="id1" style={{left:this.props.radius;width:this.props.radius;height:this.props.radius*2;border-top-left-radius:0;border-bottom-left-radius:0;background-color:this.props.color;}}></div>
         </div>
-        <div class="right-wrap" style="width:{{radius}};height:{{radius*2}};left:{{radius}};">
-          <div class="loader" id="id2"  style="left:{{-radius}};width:{{radius}};height:{{radius*2}};border-top-right-radius:0;border-bottom-right-radius:0;background-color:{{color}};"></div>
+        <div class="right-wrap" style={{width:this.props.radius;height:this.props.radius*2;left:this.props.radius;}}>
+          <div class="loader" id="id2"  style={{left:-this.props.radius;width:this.props.radius;height:this.props.radius*2;border-top-right-radius:0;border-bottom-right-radius:0;background-color:this.props.color;}}></div>
         </div>
-        <div class="inner-circle" style="width:{{(radius - borderWidth)*2}};height:{{(radius - borderWidth)*2}};border-radius:{{radius - borderWidth}};background-color: #fff;">
+        <div class="inner-circle" style={{width:(this.props.radius - this.props.borderWidth)*2}};height:(this.props.radius - this.props.borderWidth)*2;border-radius:this.props.radius - this.props.borderWidth;background-color: #fff;}}>
         {this.props.children ? this.props.children :
 <Text style={[styles.text, this.state.textStyle]}>{this.props.percent}%</Text>}
         </div>

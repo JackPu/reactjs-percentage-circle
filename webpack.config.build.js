@@ -8,13 +8,13 @@ module.exports = {
     ],
   output: {
     path: __dirname + '/',
-    filename: "react-loading-spinner.js",
+    filename: "react-percentage-circle.js",
   },
   externals: {
     "react":"React",
     "react-dom":'ReactDOM'
   },
-  
+
   module: {
     loaders: [
       {
