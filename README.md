@@ -1,4 +1,4 @@
-# React-Core-Loading-Spinner
+# Reactjs-percentage-circle
 
 [![npm](https://img.shields.io/npm/v/react-core-loading-spinner.svg?maxAge=2592000)]()
 ![Node Version](https://img.shields.io/node/v/react-core-loading-spinner.svg "Node Version")
@@ -7,9 +7,10 @@
 
 <img src="http://img1.vued.vanthink.cn/vuede4474d80623ab3d17f2ca5aeb1ccd194.png"/>
 
-React Native Version >= 0.25
+Reactjs-percentage-circle is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.And you can show some data in a circle you want.
 
-React-Native-Percentage-Cirlce is a component which supports you define your percent and draw the circle.And also you can use it as a progress bar.And you can show some data in a circle you want.
+[React Native Version](https://github.com/JackPu/react-native-percentage-circle)
+
 
 <img width="480" src="http://img1.vued.vanthink.cn/vued9c00a0a75734849d01def751ca10f248.png"/>
 
@@ -18,13 +19,13 @@ React-Native-Percentage-Cirlce is a component which supports you define your per
 ### Start 
 
 ``` bash
-npm i react-native-percentage-circle --save
+npm i reactjs-percentage-circle --save
 
 ```
 
 ``` js
 
-import PercentageCircle from 'react-native-percentage-circle';
+import PercentageCircle from 'reactjs-percentage-circle';
 
 //...
 
@@ -56,7 +57,7 @@ render() {
 
 ### Contributions
 
-Your contributions and suggestions are welcome 😄😄😄
+Your contributions and suggestions are welcome 😄💐
 
 ### MIT License
 
