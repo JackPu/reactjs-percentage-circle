@@ -2,8 +2,8 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-     // "webpack-dev-server/client?http://localhost:9000",
-      //'webpack/hot/only-dev-server',
+      "webpack-dev-server/client?http://localhost:9000",
+      'webpack/hot/only-dev-server',
       "./src/page/page"
     ],
   output: {
