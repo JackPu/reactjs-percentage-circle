@@ -1,4 +1,12 @@
-var path = require('path');
+const path = require('path');
+
+let browsers = ['Chrome'];
+// trvis env
+
+if (process.env.TRAVIS) {
+  browsers = ['Chrome_travis_ci'];
+}
+
 
 module.exports = function(config) {
   config.set({
@@ -7,7 +15,6 @@ module.exports = function(config) {
     files: [
       './tests/**/*.js'
     ],
-
     preprocessors: {
       // add webpack as preprocessor
       'src/**/*.js': ['webpack', 'sourcemap'],
@@ -50,17 +57,22 @@ module.exports = function(config) {
       'karma-chrome-launcher',
     ],
 
-
     babelPreprocessor: {
       options: {
         presets: ['airbnb']
       }
     },
+    // custom launchers 
+    customLaunchers: {
+        Chrome_travis_ci: {
+            base: 'Chrome',
+            flags: ['--no-sandbox']
+        }
+    },
     reporters: ['progress'],
     // port: 9002,
     logLevel: config.LOG_INFO,
-    browsers: ['Chrome'],
+    browsers: browsers,
     singleRun: false,
   })
-  
 };
