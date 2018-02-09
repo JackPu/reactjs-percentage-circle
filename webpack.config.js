@@ -4,14 +4,14 @@ module.exports = {
   entry: [
       "webpack-dev-server/client?http://localhost:9000",
       'webpack/hot/only-dev-server',
-      "./src/page/page"
+      "./examples/app/page"
     ],
   output: {
     path: __dirname + '/build',
     filename: "bundle.js",
     publicPath: '/build/',
   },
-  
+
   module: {
     loaders: [
       {

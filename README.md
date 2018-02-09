@@ -1,4 +1,4 @@
-# Reactjs-percentage-circle
+# reactjs-percentage-circle
 
 [![npm](https://img.shields.io/npm/v/reactjs-percentage-circle.svg?maxAge=2592000)]()
 ![Node Version](https://img.shields.io/node/v/reactjs-percentage-circle.svg "Node Version")
@@ -17,11 +17,18 @@ Reactjs-percentage-circle is a component which supports you define your percent 
 
 [Demos](http://events.jackpu.com/reactjs-percentage-circle/index.html)
 
-### Start 
+## Start
+
+### Npm
 
 ``` bash
-npm i reactjs-percentage-circle --save
+$ npm i reactjs-percentage-circle --save
+```
 
+### Yarn
+
+``` bash
+$ yarn add reactjs-percentage-circle
 ```
 
 ``` js
@@ -41,7 +48,7 @@ render() {
 
 ```
 
-### Options
+## Props
 
 | Props        | Type         | Example  | Description  |
 | ------------- |:-------------:| -----:|----------:|
@@ -54,11 +61,11 @@ render() {
 | textStyle | Array   | {fontSize: 24, color: 'red'} | define the style of the text which in the circle |
 | children | jsx   | `<Text>123</Text>` | define the children component in the circle |
 
-### Contributions
+## Contributions
 
-Your contributions and suggestions are welcome 😄💐
+Your contributions and suggestions are welcome 😁😁🌹🌹🌠🌠
 
-### MIT License
+## MIT License
 
 
 

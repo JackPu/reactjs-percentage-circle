@@ -14,7 +14,7 @@
     "type": "git"
   },
   "scripts": {
-    "start": "webpack-dev-server --port 9000",
+    "start": "webpack-dev-server --port 9000  --open",
     "build": "webpack --config ./webpack.config.build.js --progress --colors",
     "build_demo": "webpack --config ./webpack.config.js --progress --colors",
     "test": "karma start karma.conf.js"
