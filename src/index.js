@@ -25,6 +25,27 @@ class ReactjsPercentageCircle extends Component {
       rightTransformerDegree: rightTransformerDegree,
     };
   }
+
+  componentDidUpdate(prevProps){
+    if(prevProps.percent != this.state.percent){
+      const percent = this.props.percent;
+      let leftTransformerDegree = '0deg';
+      let rightTransformerDegree = '0deg';
+      if (percent >= 50) {
+        rightTransformerDegree = '180deg';
+        leftTransformerDegree = (percent - 50) * 3.6 + 'deg';
+      } else {
+        rightTransformerDegree = percent * 3.6 + 'deg';
+        leftTransformerDegree = '0deg';
+      }
+      this.setState({
+        percent: this.props.percent,
+        leftTransformerDegree: leftTransformerDegree,
+        rightTransformerDegree: rightTransformerDegree,
+      });
+    }
+  }
+  
   render() {
     return (
       <div
