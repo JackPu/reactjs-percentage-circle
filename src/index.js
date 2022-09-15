@@ -3,8 +3,6 @@
 **/
 import React, { Component } from 'react';
 
-const styles = require('style-loader!css-loader!./style.css');
-
 class ReactjsPercentageCircle extends Component {
   constructor(props) {
     super(props);
